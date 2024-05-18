@@ -1,0 +1,18 @@
+---
+interface Props {
+    id: string;
+    name: string;
+    img: string;
+    success: boolean;
+    flightNumber: number;
+    details: string;
+}
+const {id, name, img, success, flightNumber, details} = Astro.props;
+const sucessText = success ? "Éxisto" : "Fracaso";
+---
+
+<a href={"/launche/"+id}>
+    <picture class="flex justify-center p-4">
+        <img class="mb-5 rounded-lg" src={img} alt={"Path for launch "+id}>
+    </picture>
+</a>
